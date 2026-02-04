@@ -19,7 +19,7 @@ namespace Prueba_viamatica.Controllers
         public async Task<IActionResult> AsignarPelicula([FromBody] AsignarPeliculaSalaDto dto)
         {
             await _service.AsignarPeliculaAsync(dto);
-            return Ok(new { mensaje = "Pelicula eliminada correctamente" });
+            return Ok(new { mensaje = "Pelicula asociada correctamente" });
         }
     }
 }

@@ -65,7 +65,6 @@ namespace Prueba_viamatica.Controllers
             if (sala == null)
                 return NotFound("Sala no encontrada");
 
-            sala.IdSala = dto.IdSala;
             sala.Nombre = dto.Nombre;
             sala.Estado = dto.Estado;
 
@@ -84,7 +83,7 @@ namespace Prueba_viamatica.Controllers
             sala.Estado = false;
             await _context.SaveChangesAsync();
 
-            return Ok(new { mensaje = "Pelicula eliminada correctamente" });
+            return Ok(new { mensaje = "Sala eliminada correctamente" });
         }
 
         [HttpGet("buscar/{nombre}")]
